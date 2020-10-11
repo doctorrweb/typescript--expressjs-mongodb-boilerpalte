@@ -3,8 +3,8 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
-const { PORT } = process.env
+const { PORT, BASE_URL } = process.env
 
 app.listen(PORT, () => {
-   console.log('Express server listening on port ' + PORT)
+   console.log(`The drweb ExpressJS MongoDB Boilerplate server is running on : ${BASE_URL}:${PORT}`)
 })

@@ -4,8 +4,8 @@
   "description": "",
   "main": "./dist/server.js",
   "scripts": {
-    "start": "tsc && nodemon ./dist/server.js",
-    "dev": "tsc && nodemon ./dist/server.js",
+    "start": "DOTENV_CONFIG_NODE_ENV=production tsc && node ./dist/server.js",
+    "dev": "DOTENV_CONFIG_NODE_ENV=development tsc && nodemon ./dist/server.js",
     "test": "ts-node ./lib/server.ts",
     "prod": "tsc && nodemon ./dist/server.js"
   },
@@ -17,5 +17,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
   }
 }
